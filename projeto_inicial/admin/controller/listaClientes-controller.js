@@ -12,7 +12,6 @@ const CriaNovaLinha = (nome, email, id) => {
 </td> `
     linhaNovoCliente.innerHTML = conteudo
     linhaNovoCliente.dataset.id = id
-    console.log(linhaNovoCliente)
     return linhaNovoCliente
 } 
 
