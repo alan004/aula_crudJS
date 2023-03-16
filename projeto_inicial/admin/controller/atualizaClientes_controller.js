@@ -1,14 +1,15 @@
 import { clientService } from "../service/client-service.js"
-const pegaUrl = new URL(window.location)
+
 
     (async () => {
+        const pegaUrl = new URL(window.location)
         const id = pegaUrl.searchParams.get('id')
 
         const inputNome = document.querySelector('[data-nome]')
         const inputEmail = document.querySelector('[data-email]')
 
         try{
-            const dados = await clientService.detalharCliente(id)
+        const dados = await clientService.detalharCliente(id)
         inputNome.value = dados.nome
         inputEmail.value = dados.email
         }

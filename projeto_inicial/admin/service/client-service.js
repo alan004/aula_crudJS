@@ -41,12 +41,11 @@ const removeCliente = (id) => {
 
 const detalharCliente = (id)=> {
     return fetch(`http://localhost:3000/profile/${id}`)
-    .then(e=>{
+    .then(resposta =>{
         if(resposta.ok){
-
-        return e.json()
+        return resposta.json()
         }
-                throw new Error('Nao foi possível detalhar o cliente')
+        throw new Error('Nao foi possível detalhar o cliente')
     })
 }
 
